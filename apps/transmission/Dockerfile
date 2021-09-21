@@ -21,8 +21,8 @@ RUN chmod 755 /tmp/builder.sh
 # Install Builder Script Dependencies.
 #-------------------------------------------------------------------------------
 RUN dnf -y install \
-/usr/bin/mkdir /usr/bin/readlink /usr/bin/grep /usr/bin/file /usr/bin/realpath \
-/usr/bin/echo /usr/bin/rsync /usr/bin/ldd /usr/bin/awk /usr/bin/sort
+/usr/*bin/mkdir /usr/*bin/readlink /usr/*bin/grep /usr/*bin/file /usr/*bin/realpath \
+/usr/*bin/echo /usr/*bin/rsync /usr/*bin/ldd /usr/*bin/awk /usr/*bin/sort
 
 #-------------------------------------------------------------------------------
 # Enable EPEL Repository.
