@@ -1,0 +1,14 @@
+version: "3"
+services:
+  transmission:
+    image: transmission
+    command: ["transmission-daemon", "-f", "--log-debug", "-g", "/config"]
+    volumes:
+      - "/home/vagrant/transmission/settings.json:/config/settings.json"
+    ports:
+      - "9091:9091"
+    build:
+      context: .
+      args:
+        BUILDROOT: "/root/build"
+        UTILS: "transmission-create transmission-daemon transmission-edit transmission-remote transmission-show"
